@@ -14,7 +14,13 @@
   },
   "keywords": [
     "cli",
-    "utils"
+    "utils",
+    "console",
+    "reporter",
+    "activity",
+    "async",
+    "processing",
+    "log"
   ],
   "scripts": {
     "clean": "rimraf lib",
@@ -35,10 +41,13 @@
     "babel-preset-flow": "^6.23.0",
     "babel-preset-stage-0": "^6.5.0",
     "eslint": "^3.18.0",
-    "eslint-config-njakob": "^4.2.0",
+    "eslint-config-njakob": "^4.3.0",
     "eslint-plugin-flowtype": "^2.30.4",
     "eslint-plugin-import": "^2.2.0",
-    "flow-bin": "^0.39.0",
+    "flow-bin": "^0.43.0",
     "rimraf": "^2.5.4"
+  },
+  "dependencies": {
+    "@njakob/rainbow": "^1.2.1"
   }
 }

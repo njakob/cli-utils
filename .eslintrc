@@ -1,10 +1,5 @@
 {
   "extends": [
     "njakob/es6-flow-node"
-  ],
-  "settings": {
-    "import/resolver": {
-      "babel-module": {}
-    }
-  }
+  ]
 }

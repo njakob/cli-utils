@@ -1,7 +1,7 @@
 
-# breeze [![NPM version][npm-status-image]][npm] [![Build Status][build-status-image]][travis] [![ESLint Config][eslint-config-image]][eslint-config]
+# cli-utils [![NPM version][npm-status-image]][npm] [![Build Status][build-status-image]][travis] [![ESLint Config][eslint-config-image]][eslint-config]
 
-> Collection of utils to build CLI Node based applications
+> Collection of utils to build CLI Node based applications.
 
 ## Installation
 
