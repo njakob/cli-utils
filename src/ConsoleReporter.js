@@ -11,7 +11,7 @@ import Spinner from './Spinner';
 export default class ConsoleReporter extends Reporter {
   styles: Rainbow;
 
-  constructor(options: ReporterOptions) {
+  constructor(options?: ReporterOptions) {
     super(options);
     this.styles = new Rainbow(ansiStyleFormatter());
   }
