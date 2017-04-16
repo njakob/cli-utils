@@ -42,7 +42,7 @@ export default class ConsoleReporter extends Reporter {
     this.stdout.write(this.format(this.styles.parse`${message}\n`));
   }
 
-  warn(message: StyleNode) {
+  warning(message: StyleNode) {
     this.stdout.write(this.format(this.styles.parse`${message} ${this.styles.bold.yellow`!`}\n`));
   }
 

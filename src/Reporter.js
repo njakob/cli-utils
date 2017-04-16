@@ -43,7 +43,7 @@ export default class Reporter {
   header(value: StyleNode) {}
 
   // eslint-disable-next-line no-unused-vars
-  footer(value: StyleNode) {}
+  footer(message: StyleNode) {}
 
   // eslint-disable-next-line no-unused-vars
   log(message: StyleNode, verbose: VerboseLevel = 0) {}
@@ -55,7 +55,7 @@ export default class Reporter {
   info(message: StyleNode) {}
 
   // eslint-disable-next-line no-unused-vars
-  warn(message: StyleNode) {}
+  warning(message: StyleNode) {}
 
   // eslint-disable-next-line no-unused-vars
   success(message: StyleNode) {}
