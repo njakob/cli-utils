@@ -1,6 +1,6 @@
 {
   "name": "@njakob/cli-utils",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Collection of utils to build CLI Node based applications",
   "author": "Nicolas Jakob <nicow.jakob@gmail.com>",
   "license": "MIT",
