@@ -31,9 +31,10 @@ import { ConsoleReporter } from '@njakob/cli-utils';
 const reporter = new ConsoleReporter();
 
 reporter.log(reporter.parse`Something to ${reporter.styles.red`log`}`, 2);
+reporter.error(reporter.parse`${reporter.styles.red`Error`}: Something went wrong`);
 reporter.success(reporter.parse`Something was a success`);
 reporter.warning(reporter.parse`Something went not too good`);
-reporter.error(reporter.parse`Something went totally wrong`);
+reporter.failure(reporter.parse`Something went totally wrong`);
 ```
 
 ## Related Projects

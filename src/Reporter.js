@@ -44,26 +44,34 @@ export default class Reporter {
     throw new Error('Not implemented');
   }
 
-  // eslint-disable-next-line no-unused-vars
-  header(message: StyleNode) {}
-
-  // eslint-disable-next-line no-unused-vars
-  footer(message: StyleNode) {}
+  setVerbose(verbose: VerboseLevel): this {
+    this.verbose = verbose;
+    return this;
+  }
 
   // eslint-disable-next-line no-unused-vars
   log(message: StyleNode, verbose: VerboseLevel = 0) {}
 
   // eslint-disable-next-line no-unused-vars
-  error(message: StyleNode) {}
+  error(message: StyleNode, verbose: VerboseLevel = 0) {}
 
   // eslint-disable-next-line no-unused-vars
   info(message: StyleNode) {}
 
   // eslint-disable-next-line no-unused-vars
+  success(message: StyleNode) {}
+
+  // eslint-disable-next-line no-unused-vars
   warning(message: StyleNode) {}
 
   // eslint-disable-next-line no-unused-vars
-  success(message: StyleNode) {}
+  failure(message: StyleNode) {}
+
+  // eslint-disable-next-line no-unused-vars
+  header(message: StyleNode) {}
+
+  // eslint-disable-next-line no-unused-vars
+  footer(message: StyleNode) {}
 
   // eslint-disable-next-line no-unused-vars
   activity(message: StyleNode): Activity {

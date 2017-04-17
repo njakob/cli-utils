@@ -24,34 +24,40 @@ export default class ConsoleReporter extends Reporter {
     return this.styles.format(node).value;
   }
 
-  header(message: StyleNode) {
-    this.log(message, 1);
-  }
-
-  footer(message: StyleNode) {
-    this.log(this.styles.dim`${message}`, 1);
-  }
-
   log(message: StyleNode, verbose: VerboseLevel = 0) {
     if (this.verbose >= verbose) {
-      this.stdout.write(this.format(this.styles.parse`${message}\n`));
+      this.stdout.write(this.format(this.parse`${message}\n`));
     }
   }
 
-  error(message: StyleNode) {
-    this.stderr.write(this.format(this.styles.bold.red`${message} ×\n`));
+  error(message: StyleNode, verbose: VerboseLevel = 0) {
+    if (this.verbose >= verbose) {
+      this.stderr.write(this.format(this.parse`${message}\n`));
+    }
   }
 
   info(message: StyleNode) {
-    this.stdout.write(this.format(this.styles.parse`${message}\n`));
+    this.stdout.write(this.format(this.styles.dim`${message}\n`));
+  }
+
+  success(message: StyleNode) {
+    this.stdout.write(this.format(this.parse`${message} ${this.styles.bold.green`✓`}\n`));
   }
 
   warning(message: StyleNode) {
     this.stdout.write(this.format(this.styles.bold.yellow`${message} !\n`));
   }
 
-  success(message: StyleNode) {
-    this.stdout.write(this.format(this.styles.parse`${message} ${this.styles.bold.green`✓`}\n`));
+  failure(message: StyleNode) {
+    this.stderr.write(this.format(this.styles.bold.red`${message} ×\n`));
+  }
+
+  header(message: StyleNode) {
+    this.log(message, 1);
+  }
+
+  footer(message: StyleNode) {
+    this.log(this.styles.dim`${message}`, 1);
   }
 
   activity(message: StyleNode): Activity {
