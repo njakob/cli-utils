@@ -6,7 +6,6 @@
 ## Features
 
 - Console reporter
-- Flowtype definitions
 
 ## Installation
 

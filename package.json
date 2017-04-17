@@ -24,7 +24,9 @@
   ],
   "scripts": {
     "clean": "rimraf lib",
-    "build": "npm run clean && babel -d lib src",
+    "build": "npm run clean && npm run build:sources",
+    "build:sources": "babel -d lib src",
+    "build:flow": "flow gen-flow-files --out-dir lib src/index.js",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "flow": "flow check",
@@ -44,7 +46,7 @@
     "eslint-config-njakob": "^4.3.0",
     "eslint-plugin-flowtype": "^2.30.4",
     "eslint-plugin-import": "^2.2.0",
-    "flow-bin": "^0.43.0",
+    "flow-bin": "^0.44.0",
     "rimraf": "^2.5.4"
   },
   "dependencies": {
