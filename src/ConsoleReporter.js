@@ -16,6 +16,10 @@ export default class ConsoleReporter extends Reporter {
     this.styles = new Rainbow(ansiStyleFormatter());
   }
 
+  parse(strings: Array<string>, ...values: Array<mixed>): StyleNode {
+    return this.styles.parse(strings, ...values);
+  }
+
   format(node: StyleNode): string {
     return this.styles.format(node).value;
   }
@@ -35,7 +39,7 @@ export default class ConsoleReporter extends Reporter {
   }
 
   error(message: StyleNode) {
-    this.stderr.write(this.format(this.styles.parse`${message} ${this.styles.bold.red`×`}\n`));
+    this.stderr.write(this.format(this.styles.bold.red`${message} ×\n`));
   }
 
   info(message: StyleNode) {
@@ -43,7 +47,7 @@ export default class ConsoleReporter extends Reporter {
   }
 
   warning(message: StyleNode) {
-    this.stdout.write(this.format(this.styles.parse`${message} ${this.styles.bold.yellow`!`}\n`));
+    this.stdout.write(this.format(this.styles.bold.yellow`${message} !\n`));
   }
 
   success(message: StyleNode) {

@@ -40,7 +40,12 @@ export default class Reporter {
   }
 
   // eslint-disable-next-line no-unused-vars
-  header(value: StyleNode) {}
+  parse(strings: Array<string>, ...values: Array<mixed>): StyleNode {
+    throw new Error('Not implemented');
+  }
+
+  // eslint-disable-next-line no-unused-vars
+  header(message: StyleNode) {}
 
   // eslint-disable-next-line no-unused-vars
   footer(message: StyleNode) {}
