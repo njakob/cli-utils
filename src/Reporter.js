@@ -56,16 +56,16 @@ export default class Reporter {
   error(message: StyleNode, verbose: VerboseLevel = 0) {}
 
   // eslint-disable-next-line no-unused-vars
-  info(message: StyleNode) {}
+  info(message: StyleNode, verbose: VerboseLevel = 0) {}
 
   // eslint-disable-next-line no-unused-vars
-  success(message: StyleNode) {}
+  success(message: StyleNode, verbose: VerboseLevel = 0) {}
 
   // eslint-disable-next-line no-unused-vars
-  warning(message: StyleNode) {}
+  warning(message: StyleNode, verbose: VerboseLevel = 0) {}
 
   // eslint-disable-next-line no-unused-vars
-  failure(message: StyleNode) {}
+  failure(message: StyleNode, verbose: VerboseLevel = 0) {}
 
   // eslint-disable-next-line no-unused-vars
   header(message: StyleNode) {}

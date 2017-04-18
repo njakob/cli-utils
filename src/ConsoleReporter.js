@@ -36,20 +36,28 @@ export default class ConsoleReporter extends Reporter {
     }
   }
 
-  info(message: StyleNode) {
-    this.stdout.write(this.format(this.styles.dim`${message}\n`));
+  info(message: StyleNode, verbose: VerboseLevel = 0) {
+    if (this.verbose >= verbose) {
+      this.stdout.write(this.format(this.styles.dim`${message}\n`));
+    }
   }
 
-  success(message: StyleNode) {
-    this.stdout.write(this.format(this.parse`${message} ${this.styles.bold.green`✓`}\n`));
+  success(message: StyleNode, verbose: VerboseLevel = 0) {
+    if (this.verbose >= verbose) {
+      this.stdout.write(this.format(this.parse`${message} ${this.styles.bold.green`✓`}\n`));
+    }
   }
 
-  warning(message: StyleNode) {
-    this.stdout.write(this.format(this.styles.bold.yellow`${message} !\n`));
+  warning(message: StyleNode, verbose: VerboseLevel = 0) {
+    if (this.verbose >= verbose) {
+      this.stdout.write(this.format(this.styles.bold.yellow`${message} !\n`));
+    }
   }
 
-  failure(message: StyleNode) {
-    this.stderr.write(this.format(this.styles.bold.red`${message} ×\n`));
+  failure(message: StyleNode, verbose: VerboseLevel = 0) {
+    if (this.verbose >= verbose) {
+      this.stderr.write(this.format(this.styles.bold.red`${message} ×\n`));
+    }
   }
 
   header(message: StyleNode) {
