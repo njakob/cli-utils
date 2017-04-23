@@ -1,5 +1,5 @@
 
-# cli-utils [![NPM version][npm-status-image]][npm:@njakob/cli-utils] [![Build Status][build-status-image]][travis] [![ESLint Config][eslint-config-image]][github:njakob/eslint-config]
+# cli-utils [![NPM version][badge:npm-status]][npm:@njakob/cli-utils] [![Build Status][badge:build-status]][travis] [![ESLint Config][badge:eslint-config]][github:njakob/eslint-config] [![Conventional Commits][badge:conventional-commits]][conventional-commits]
 
 > Collection of utils to build CLI Node based applications.
 
@@ -41,15 +41,22 @@ reporter.failure(reporter.parse`Something went totally wrong`);
 
 - [`rainbow`][github:njakob/rainbow]: String styling helpers inspired by Chalk.
 
+## Changelog
+
+See [changelog][CHANGELOG].
+
 ## Licences
 
 `njakob/cli-utils` is licensed under the [MIT License][licence].
 
+[changelog]: CHANGELOG.md
 [licence]: LICENSE
 [github:njakob/rainbow]: https://github.com/njakob/rainbow
 [github:njakob/eslint-config]: https://github.com/njakob/eslint-config
 [npm:@njakob/cli-utils]: https://nodei.co/npm/@njakob/cli-utils
 [travis]: https://travis-ci.org/njakob/cli-utils
-[npm-status-image]: https://img.shields.io/npm/v/@njakob/cli-utils.svg
-[build-status-image]: https://travis-ci.org/njakob/cli-utils.svg?branch=master
-[eslint-config-image]: https://img.shields.io/badge/eslint_config-njakob-463fd4.svg
+[conventional-commits]: https://conventionalcommits.org
+[badge:npm-status]: https://img.shields.io/npm/v/@njakob/cli-utils.svg
+[badge:build-status]: https://travis-ci.org/njakob/cli-utils.svg?branch=master
+[badge:eslint-config]: https://img.shields.io/badge/eslint_config-njakob-463fd4.svg
+[badge:conventional-commits]: https://img.shields.io/badge/conventional%20commits-1.0.0-yellow.svg
