@@ -41,6 +41,10 @@ reporter.failure(reporter.parse`Something went totally wrong`);
 
 - [`rainbow`][github:njakob/rainbow]: String styling helpers inspired by Chalk.
 
+## Inspired by
+
+- `ConsoleReporter` system used in [`yarn`][github:yarnpkg/yarn]
+
 ## Changelog
 
 See [changelog][CHANGELOG].
@@ -53,6 +57,7 @@ See [changelog][CHANGELOG].
 [licence]: LICENSE
 [github:njakob/rainbow]: https://github.com/njakob/rainbow
 [github:njakob/eslint-config]: https://github.com/njakob/eslint-config
+[github:yarnpkg/yarn]: https://github.com/yarnpkg/yarn
 [npm:@njakob/cli-utils]: https://nodei.co/npm/@njakob/cli-utils
 [travis]: https://travis-ci.org/njakob/cli-utils
 [conventional-commits]: https://conventionalcommits.org
