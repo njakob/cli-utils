@@ -68,18 +68,20 @@ export default class ConsoleReporter extends Reporter {
     this.log(this.styles.dim`${message}`, 1);
   }
 
-  activity(message: StyleNode): Activity {
+  activity(initialMessage?: ?StyleNode): Activity {
     const spinner = new Spinner(this.stdout);
     spinner.start();
-    spinner.setText(this.format(message));
+    if (initialMessage) {
+      spinner.setText(this.format(initialMessage));
+    }
 
     return new Activity(
       () => {
         spinner.stop();
       },
-      (innerMessage?: StyleNode) => {
-        if (innerMessage) {
-          spinner.setText(this.format(innerMessage));
+      (message?: StyleNode) => {
+        if (message) {
+          spinner.setText(this.format(message));
         }
       },
     );
